@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>NBR email designs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="topnav"><div class="in"><a class="brand" href="index.html">NBR GHL audit</a><a href="index.html">Summary</a><a href="email.html">Email + Black Friday</a><a href="cleanup.html">Cleanup review</a><a href="emails.html" aria-current="page">Email designs</a><a href="cleanup.html#submissions">Submissions</a></div></nav>
+<main>
+<header>
+  <p class="eyebrow">NBR Education · GoHighLevel · Email designs</p>
+  <h1 style="margin-top:8px">How NBR's automation emails look today</h1>
+  <p class="lede">Previews of the emails sent by the automations we're keeping, grouped by automation. Click a preview to see the full email. These are the starting point for the new NBR email standard.</p>
+  <div class="pills"><span class="pill">Captured Nov 21, 2026 from GHL's preview (view only)</span><span class="pill" id="totals"></span></div>
+</header>
+<nav class="toc" id="toc" aria-label="Automations"></nav>
+<div id="groups" style="display:grid;gap:34px"></div>
+<footer>NBR email designs · design scores come from the email review (out of 10) · email addresses are left out of this page</footer>
+</main>
+<script>window.NBR_PUBLIC=true;</script>
+<script src="assets/cleanup-data.js"></script>
+<script>
+(function(){
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const list=(window.NBR_ITEMS||[]).filter(i=>i.emails&&i.emails.some(e=>e.shot));
+let shots=0; list.forEach(i=>i.emails.forEach(e=>{ if(e.shot) shots++; }));
+document.getElementById("totals").textContent=`${shots} email previews · ${list.length} automations`;
+document.getElementById("toc").innerHTML=list.map(i=>`<a href="#e-${esc(i.id)}">${esc(i.n)}</a>`).join("");
+document.getElementById("groups").innerHTML=list.map(i=>`<section id="e-${esc(i.id)}"><div class="grouphead"><h3>${esc(i.n)}</h3><span class="note">${esc(i.a)} · ${esc(i.g)} · <a href="cleanup.html#item-${esc(i.id)}">See how it works</a>${i.ghl?` · <a href="${esc(i.ghl)}" target="_blank" rel="noopener">Open in GHL ↗</a>`:""}</span></div>
+  <div class="egrid">${i.emails.filter(e=>e.shot).map((e,n)=>`<div class="ecard">${window.NBR_PUBLIC&&e.sens?`<div class="ethumb enone">Preview hidden: it shows a coupon code or contact details. Read the text below.</div>`:`<a href="${esc(e.shot)}" target="_blank" rel="noopener" class="ethumb"><img loading="lazy" src="${esc(e.shot)}" alt="Preview of the email: ${esc(e.subj)}"></a>`}<div class="ebody"><p class="etitle">${esc(e.subj||"(no subject)")}</p><p class="gnames">${e.from?"From "+esc(e.from):""}${e.score?" · design score "+esc(e.score)+"/10":""}</p>${e.mob&&!(window.NBR_PUBLIC&&e.sens)?`<p><a href="${esc(e.mob)}" target="_blank" rel="noopener">Phone view</a></p>`:""}${e.keep||e.improve?`<details><summary>Review notes</summary><div class="etext">${e.keep?"<b>Keep:</b> "+esc(e.keep)+"\n\n":""}${e.improve?"<b>Improve:</b> "+esc(e.improve):""}</div></details>`:""}${e.body?`<details><summary>Read the text</summary><div class="etext">${esc(e.body)}</div></details>`:""}</div></div>`).join("")}</div></section>`).join("");
+})();
+</script>
+</body>
+</html>

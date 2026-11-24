@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>NBR GHL cleanup review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="topnav"><div class="in"><a class="brand" href="index.html">NBR GHL audit</a><a href="index.html">Summary</a><a href="email.html">Email + Black Friday</a><a href="cleanup.html" aria-current="page">Cleanup review</a><a href="emails.html">Email designs</a><a href="cleanup.html#submissions">Submissions</a></div></nav>
+<main>
+<header>
+  <p class="eyebrow">NBR Education · GoHighLevel · Cleanup review</p>
+  <h1 style="margin-top:8px">What's in use, what isn't, and what can go</h1>
+  <p class="lede">Every funnel, website, automation, product, form, survey and calendar in NBR's GHL account, checked against the last 60 days of activity. Use the list to see every name, then open an item to see how it works, its emails, and to pick Keep, Shut down or Not sure. Nothing changes in GHL until the agreed list is approved.</p>
+  <div class="pills"><span class="pill">Read-only audit · nothing changed in GHL</span><span class="pill">Checked Nov 20–21 · refreshed Nov 23, 2026 (EST)</span><span class="pill">186 items</span></div>
+</header>
+
+<div id="who"></div>
+
+<div class="tabs" role="tablist"><button role="tab" id="tab-review" aria-selected="true">Review</button><button role="tab" id="tab-subs" aria-selected="false">Submissions <span id="subcount"></span></button></div>
+
+<section id="view-review">
+  <div class="stats" id="stats"></div>
+  <p class="note"><b>Active and in use:</b> switched on, with sales, visits, submissions or runs in the last 60 days. <b>Active but not in use:</b> switched on, nothing in 60 days. <b>Not active:</b> drafts, unpublished or test items. GHL only keeps 60 days of history, so anything it couldn't judge is marked Check.</p>
+  <p class="note"><b>Labels:</b> <b>Keep</b> = still needed. <b>Check</b> = needs a yes/no answer from the person named. <b>Shut down</b> = safe to switch off. <b>Problem</b> = something is broken or set up wrong. Hover over a label (or tap it on a phone) to see why and what to do.</p>
+  <div class="filters" id="gfilters" role="group" aria-label="Filter by group"></div>
+  <div class="filters" id="vfilters" role="group" aria-label="Filter by verdict"></div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+    <input class="search" id="q" type="search" placeholder="Search by name or area" aria-label="Search items">
+    <select class="search" id="tfilter" style="max-width:200px" aria-label="Filter by type"></select>
+    <label class="note" style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="mine"> Only items I haven't answered</label>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between"><div class="filters" id="viewsw" role="group" aria-label="View"><button type="button" data-v="list">List of names</button><button type="button" data-v="cards">Review cards</button></div><span class="note" id="count"></span></div>
+  <div id="list" class="cards"></div>
+</section>
+
+<section id="view-subs" hidden>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+    <div class="filters" id="sfilters"></div>
+    <div class="savebar"><span class="note" id="loaded"></span><button class="btn ghost" id="refresh" type="button">Refresh</button></div>
+  </div>
+  <div class="stats" id="substats"></div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+    <select class="search" id="sreport" style="max-width:220px" aria-label="Report"><option value="">All reports</option><option>Cleanup</option><option>Email + Black Friday</option></select>
+    <select class="search" id="sperson" style="max-width:200px" aria-label="Person"><option value="">Everyone</option></select>
+    <select class="search" id="sdec" style="max-width:200px" aria-label="Decision"><option value="">Any answer</option></select>
+    <input class="search" id="sq" type="search" placeholder="Search items or notes" aria-label="Search submissions">
+    <label class="note" style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="hist"> Show full history</label>
+  </div>
+  <div class="tablewrap"><table class="subtable"><thead><tr><th>When</th><th>Name</th><th>Report</th><th>Item</th><th>Answer</th><th>Note</th></tr></thead><tbody id="subrows"></tbody></table></div>
+</section>
+
+<footer>NBR GHL cleanup review · read-only audit, Nov 2026 · answers are saved to the team decisions sheet · email addresses and coupon codes are left out of this page</footer>
+</main>
+<script>window.NBR_PUBLIC=true;</script>
+<script src="assets/cleanup-data.js"></script>
+<script src="assets/connector.js"></script>
+<script src="assets/review.js"></script>
+</body>
+</html>

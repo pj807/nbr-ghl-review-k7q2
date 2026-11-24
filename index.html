@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>NBR GHL audit: executive summary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7f9;--panel:#fff;--ink:#161a22;--muted:#5b6372;--line:#dfe3ea;--soft:#eef0f3;
+--keep:#23804a;--keep-bg:#e3f3e8;--check:#b5790f;--check-bg:#fbf0dd;--shut:#8a93a3;--shut-bg:#eef0f3;
+--blue:#2f6fd6;--blue-bg:#e8f0fc;--red:#b3261e;--red-bg:#fbe7e5;
+--display:"Newsreader",Georgia,serif;--body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0f141d;--panel:#171d28;--ink:#e8ebf1;--muted:#9aa3b2;--line:#2b3342;--soft:#1f2633;
+--keep:#5fc488;--keep-bg:#15321f;--check:#e0a94a;--check-bg:#3a2a12;--shut:#7d8696;--shut-bg:#1f2633;
+--blue:#7fb0f5;--blue-bg:#1a2a44;--red:#f28b82;--red-bg:#3d1c1a;color-scheme:dark}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55}
+main{max-width:860px;margin:0 auto;padding:40px 18px 72px;display:grid;gap:38px}
+h1,h2{font-family:var(--display);font-weight:500;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(28px,5vw,38px);line-height:1.15}h2{font-size:23px}p{margin:0}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{color:var(--muted);font-size:16px;max-width:62ch;margin-top:10px}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.pill{font-size:12.5px;font-weight:500;padding:5px 11px;border-radius:999px;background:var(--soft);color:var(--muted)}
+section{display:grid;gap:14px}.note{color:var(--muted);font-size:13.5px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px}.pad{padding:16px 18px}
+.take{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:10px}
+.take .panel{padding:16px;display:grid;gap:6px;align-content:start}
+.big{font-size:30px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums}
+.take .k{border-top:3px solid var(--keep);border-radius:0 0 12px 12px}.take .r{border-top:3px solid var(--red);border-radius:0 0 12px 12px}.take .c{border-top:3px solid var(--check);border-radius:0 0 12px 12px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.bars{display:grid;gap:14px}
+.brow{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:center}
+.blab{font-size:14px;font-weight:600}.blab span{display:block;font-size:12.5px;color:var(--muted);font-weight:400}
+.track{display:flex;gap:2px;height:30px}
+.seg{position:relative;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600;color:var(--ink);min-width:28px;cursor:default}
+.seg:first-child{border-radius:4px 0 0 4px}.seg:last-child{border-radius:0 4px 4px 0}
+.seg.k{background:var(--keep-bg);border-bottom:3px solid var(--keep)}.seg.c{background:var(--check-bg);border-bottom:3px solid var(--check)}.seg.s{background:var(--shut-bg);border-bottom:3px solid var(--shut)}
+.tip{position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);font-size:12px;font-weight:500;padding:5px 8px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .12s;z-index:2}
+.seg:hover .tip,.seg:focus .tip{opacity:1}
+.seg:first-child .tip{left:0;transform:none}.seg:last-child .tip{left:auto;right:0;transform:none}
+.svgwrap{overflow-x:auto;padding:12px}.svgwrap svg{min-width:640px;width:100%;height:auto;display:block}
+svg text{font-family:var(--body)}
+.urg{display:grid;gap:8px}
+.u{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;padding:14px 16px;align-items:start}
+.u .n{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:600;background:var(--red-bg);color:var(--red)}
+.u b{font-weight:600}
+.links{display:grid;gap:8px}
+.lk{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:14px 16px;align-items:center;text-decoration:none;color:inherit}
+.lk:hover{border-color:var(--muted)}
+.chip{display:inline-block;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.ok{background:var(--keep-bg);color:var(--keep)}.soon{background:var(--check-bg);color:var(--check)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}th{font-size:12px;color:var(--muted);font-weight:600}td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+details summary{cursor:pointer;font-size:13.5px;color:var(--blue)}
+footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:560px){.brow{grid-template-columns:1fr}}
+.topnav{position:sticky;top:0;z-index:5;background:var(--panel);border-bottom:1px solid var(--line)}.topnav .in{max-width:860px;margin:0 auto;padding:10px 18px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}.topnav a{font-size:13.5px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 11px;border-radius:8px}.topnav a[aria-current="page"]{background:var(--ink);color:var(--bg)}.topnav .brand{font-weight:600;color:var(--ink);margin-right:8px;padding-left:0}
+main a{color:var(--blue)}
+.seg .sl{font-weight:500}@media (max-width:560px){.seg .sl{display:none}}
+</style>
+</head>
+<body>
+<nav class="topnav"><div class="in"><a class="brand" href="index.html">NBR GHL audit</a><a href="index.html" aria-current="page">Summary</a><a href="email.html">Email + Black Friday</a><a href="cleanup.html">Cleanup review</a><a href="emails.html">Email designs</a><a href="cleanup.html#submissions">Submissions</a></div></nav>
+<main>
+<header>
+  <p class="eyebrow">NBR Education · GoHighLevel audit · Executive summary</p>
+  <h1 style="margin-top:8px">NBR's GHL: what's running, what can go, and what needs a decision</h1>
+  <p class="lede">A read-only check of every funnel, automation, product and email in NBR's GHL account, compared against real activity. Refreshed Nov 23 (EST) to include Greg's weekend work and the Black Friday campaign. Nothing was changed in GHL.</p>
+  <div class="pills"><span class="pill">Checked Nov 20–21 · refreshed Nov 23, 2026 (EST)</span><span class="pill">Activity window: last 60 days (all GHL keeps)</span></div>
+</header>
+
+<section>
+  <h2>The four things to know</h2>
+  <div class="take">
+    <div class="panel r"><p class="big" style="color:var(--red)">8%</p><p><b>of emails got through Nov 22–24.</b> GHL blocked all NBR sending until Nov 24, 10:04 AM EST.</p><p class="note">Gmail and Outlook are rejecting mail over the domain's reputation. Triggered emails (purchases, support) are blocked too.</p></div>
+    <div class="panel c"><p class="big" style="color:var(--check)">7</p><p><b>Black Friday emails are scheduled</b> (Greg's BFCM campaign, Nov 23–30, 15% off ISLA).</p><p class="note">Email 1 was paused after 400 of 4,427. They go to everyone who opened in 60 days, not just ISLA, and have no postal address.</p></div>
+    <div class="panel c"><p class="big" style="color:var(--check)">0</p><p><b>sends planned after Nov 30.</b> The warm-up has been paused since Nov 22, with 3,995 people partway through.</p><p class="note">December would be 31 days of silence.</p></div>
+    <div class="panel k"><p class="big" style="color:var(--keep)">38 + 53</p><p><b>items can go now, and 53 more need a yes or no.</b></p><p class="note">Out of 186 funnels, automations, products, forms, surveys and calendars. 69 are switched on but haven't been used in 60 days.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>What's in the account</h2>
+  <p class="note">Green: in use or keep · Amber: switched on but unused, or needs a yes/no · Grey: not active, or shut down.</p>
+  <div class="panel pad bars" id="bars" role="img" aria-label="186 items. By activity: 68 active and in use, 69 active but not in use, 49 not active. By verdict: 95 keep, 53 check, 38 shut down."></div>
+  <div class="panel pad" style="overflow-x:auto"><p class="note" style="margin-bottom:8px">Click any number to see the names in that group.</p>
+    <table><thead><tr><th>Type</th><th class="num">Active and in use</th><th class="num">Active, not in use</th><th class="num">Not active</th><th class="num">Total</th></tr></thead><tbody><tr><td><a href="cleanup.html#show-all-workflow">Automations</a></td><td class="num"><a href="cleanup.html#show-in-use-workflow">29</a></td><td class="num"><a href="cleanup.html#show-not-in-use-workflow">29</a></td><td class="num"><a href="cleanup.html#show-not-active-workflow">28</a></td><td class="num"><a href="cleanup.html#show-all-workflow">86</a></td></tr><tr><td><a href="cleanup.html#show-all-funnel">Funnels</a></td><td class="num"><a href="cleanup.html#show-in-use-funnel">16</a></td><td class="num"><a href="cleanup.html#show-not-in-use-funnel">8</a></td><td class="num"><a href="cleanup.html#show-not-active-funnel">6</a></td><td class="num"><a href="cleanup.html#show-all-funnel">30</a></td></tr><tr><td><a href="cleanup.html#show-all-website">Websites</a></td><td class="num"><a href="cleanup.html#show-in-use-website">5</a></td><td class="num note">0</td><td class="num"><a href="cleanup.html#show-not-active-website">2</a></td><td class="num"><a href="cleanup.html#show-all-website">7</a></td></tr><tr><td><a href="cleanup.html#show-all-product">Products</a></td><td class="num"><a href="cleanup.html#show-in-use-product">3</a></td><td class="num"><a href="cleanup.html#show-not-in-use-product">10</a></td><td class="num"><a href="cleanup.html#show-not-active-product">1</a></td><td class="num"><a href="cleanup.html#show-all-product">14</a></td></tr><tr><td><a href="cleanup.html#show-all-form">Forms</a></td><td class="num"><a href="cleanup.html#show-in-use-form">7</a></td><td class="num"><a href="cleanup.html#show-not-in-use-form">14</a></td><td class="num"><a href="cleanup.html#show-not-active-form">6</a></td><td class="num"><a href="cleanup.html#show-all-form">27</a></td></tr><tr><td><a href="cleanup.html#show-all-survey">Surveys</a></td><td class="num"><a href="cleanup.html#show-in-use-survey">7</a></td><td class="num"><a href="cleanup.html#show-not-in-use-survey">4</a></td><td class="num"><a href="cleanup.html#show-not-active-survey">1</a></td><td class="num"><a href="cleanup.html#show-all-survey">12</a></td></tr><tr><td><a href="cleanup.html#show-all-calendar">Calendars</a></td><td class="num"><a href="cleanup.html#show-in-use-calendar">1</a></td><td class="num"><a href="cleanup.html#show-not-in-use-calendar">4</a></td><td class="num"><a href="cleanup.html#show-not-active-calendar">5</a></td><td class="num"><a href="cleanup.html#show-all-calendar">10</a></td></tr><tr><td><b>Total</b></td><td class="num"><a href="cleanup.html#show-in-use"><b>68</b></a></td><td class="num"><a href="cleanup.html#show-not-in-use"><b>69</b></a></td><td class="num"><a href="cleanup.html#show-not-active"><b>49</b></a></td><td class="num"><a href="cleanup.html#show-all"><b>186</b></a></td></tr></tbody></table></div>
+  <p class="note">"In use" means sales, visits, submissions or runs in the last 60 days (all the history GHL keeps). Forms now count real submissions, not page views, so 6 forms and 3 surveys moved to "not in use" on Nov 23. Product changes are recommendations only and need PJ's yes.</p>
+</section>
+
+<section>
+  <h2>Email: what's sending until Dec 31</h2>
+  <div class="panel svgwrap">
+    <svg viewBox="0 0 680 206" role="img" aria-label="Timeline from Nov 21 to Dec 31. Warm-up emails ran until Nov 22, then were paused. GHL blocked sending Nov 23 to Nov 24, 10:04 AM EST. The BFCM campaign sends one ISLA email a day Nov 23 to 30. December 1 to 31 has nothing planned.">
+      <g id="tl"></g>
+    </svg>
+  </div>
+  
+  <div class="panel pad" id="behind" style="display:grid;gap:12px">
+    <p style="font-weight:600">What's behind the timeline</p>
+    <div id="b-warm"><p><b>Warm-up emails</b> <span class="note">(5 automations. All 14 groups were released, so 6,668 people entered. WU 5 has been paused since Nov 22, 10:35 PM, with 3,995 partway through.)</span></p><ul style="margin:6px 0 0;padding-left:18px;display:grid;gap:4px"><li><a href="cleanup.html#item-workflow-wu-1-tag-30-day-groups">WU 1 – Tag 30-Day Groups</a> · <span class="note">Active and in use</span> · <a href="https://app.gohighlevel.com/location/JResmiMkYCKiyhmQ3Aa3/workflow/efd58483-2517-473e-95f4-270d3371c7bf" target="_blank" rel="noopener">Open in GHL ↗</a></li><li><a href="cleanup.html#item-workflow-wu-2-tag-60-day-groups">WU 2 – Tag 60-Day Groups</a> · <span class="note">Active and in use</span> · <a href="https://app.gohighlevel.com/location/JResmiMkYCKiyhmQ3Aa3/workflow/f16c6d9a-5fd9-4583-930d-09ee19038941" target="_blank" rel="noopener">Open in GHL ↗</a></li><li><a href="cleanup.html#item-workflow-wu-3-tag-180-day-groups">WU 3 – Tag 180-Day Groups</a> · <span class="note">Active and in use</span> · <a href="https://app.gohighlevel.com/location/JResmiMkYCKiyhmQ3Aa3/workflow/d04080c2-412e-4f0a-9424-e76edbf17e0c" target="_blank" rel="noopener">Open in GHL ↗</a></li><li><a href="cleanup.html#item-workflow-wu-4-waterfall-scheduler">WU 4 – Waterfall Scheduler</a> · <span class="note">Active and in use</span> · <a href="https://app.gohighlevel.com/location/JResmiMkYCKiyhmQ3Aa3/workflow/eb0d7fbf-5f04-4df1-8b78-91ee509f37b7" target="_blank" rel="noopener">Open in GHL ↗</a></li><li><a href="cleanup.html#item-workflow-wu-5-warm-up-sequence">WU 5 – Warm-up Sequence</a> · <span class="note">Active and in use</span> · <a href="https://app.gohighlevel.com/location/JResmiMkYCKiyhmQ3Aa3/workflow/fbb27d56-05d7-4ab7-9790-b40df87f50c4" target="_blank" rel="noopener">Open in GHL ↗</a></li></ul></div>
+    <div id="b-block"><p><b>Sending blocked</b>: GHL stopped all NBR email until Tue Nov 24, 10:04 AM EST, because providers flagged too much spam. <a href="email.html#deliver">See the deliverability numbers</a></p></div>
+    <div id="b-bf"><p><b>Black Friday (BFCM)</b>: 7 ISLA email campaigns built by Greg on Nov 22, one a day at 7 AM EST, Nov 23–30 (none on Thanksgiving). Email 1 was paused after 400 of 4,427 sends. They're email campaigns, not automations. <a href="email.html#bf">See all 7 and the rules check</a></p></div>
+    <div id="b-dec"><p><b>December</b>: nothing is scheduled after BFCM ends. <a href="email.html#calendar">See the recommended sending schedule</a></p></div>
+  </div>
+  <p class="note">Last 7 days: 8,148 sends failed. Gmail cites "low domain reputation" for most bounces since Nov 22, and Google Postmaster's error rate rose from 2.8% (Nov 20) to 11%. SPF, DKIM and DMARC all pass, so this is reputation, not setup. Small sends to the most engaged contacts, one brand at a time, help it recover. A recommended December schedule is in the email report.</p>
+</section>
+
+<section>
+  <h2>Urgent: needs a person</h2>
+  <div class="urg">
+    <div class="panel u"><span class="n">1</span><div><b>NBR email is blocked, and BFCM keeps sending.</b> GHL blocked all sending until Nov 24, 10:04 AM EST. Email 2 was set for 7:00 AM that day, before the block lifts. Only 8% of emails were delivered Nov 22–24. Weston and Greg decide who the rest of BFCM goes to.</div></div>
+    <div class="panel u"><span class="n">2</span><div><b>BFCM isn't limited to ISLA and has no postal address.</b> It goes to about 4,430 people who opened any email in 60 days; only about 414 have an ISLA tag. Marketing emails need a mailing address under anti-spam law.</div></div>
+    <div class="panel u"><span class="n">3</span><div><b>Nothing is planned after Nov 30, and the warm-up is paused.</b> 3,995 people are partway through WU 5. Decide whether to resume it after BFCM, and who builds December.</div></div>
+    <div class="panel u"><span class="n">4</span><div><b>Certification buyers may be missing their access.</b> The certification purchase automation ran 0 times in 60 days, but the checkout took 5 payments Oct 14–26. It likely points at old prices.</div></div>
+    <div class="panel u"><span class="n">5</span><div><b>ISLA approval emails send from the old address.</b> 4 emails have no sender set, so they go out from an old nbr.education address instead of mail.nbrtribe.com.</div></div>
+    <div class="panel u"><span class="n">6</span><div><b>Waitlist emails have no unsubscribe link or postal address.</b> Add the standard NBR footer to those emails.</div></div>
+  </div>
+</section>
+
+<section id="changes">
+  <h2>What changed since Nov 21</h2>
+  <div class="panel pad" style="display:grid;gap:8px">
+    <ul style="margin:0;padding-left:18px;display:grid;gap:6px">
+      <li><b>New: BFCM campaign</b> (Greg, Nov 22): 7 ISLA emails and a "BFCM 2026" template folder. Email 1 paused Nov 23, 12:47 PM. <a href="email.html#bf">Details</a></li>
+      <li><b>Paused: WU 5 – Warm-up Sequence</b> (Nov 22, 10:35 PM, a pause set in advance). <a href="cleanup.html#item-workflow-wu-5-warm-up-sequence">Open</a></li>
+      <li><b>Switched to draft: "3.0 Certification: Re-Apply - NOV.26"</b>, now in "not active". <a href="cleanup.html#item-workflow-3-0-certification-re-apply-nov-26">Open</a></li>
+      <li><b>Edited:</b> the 2.0 Waitlist automation, the NBR Directory automation and survey, and the Handoff Funnel (new NBR.Directory step).</li>
+      <li><b>No change:</b> no products, forms or funnels were created or deleted. The cleanup verdicts are the same (95 keep, 53 check, 38 shut down).</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>What happens next</h2>
+  <div class="panel svgwrap">
+    <svg viewBox="0 0 680 118" role="img" aria-label="Next steps: audit done, team reviews and votes by Monday, PJ approves the cleanup list, items are switched off safely, and a guide is published for what stays.">
+      <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.5"/></marker></defs>
+      <g id="flow"></g>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>The full reports</h2>
+  <div class="links">
+    <a class="panel lk" href="email.html"><div><b>Email + Black Friday status</b><p class="note">The BFCM campaign, deliverability, the sending calendar, settings check, and 8 decisions to answer.</p></div><span class="chip ok">Ready</span></a>
+    <a class="panel lk" href="cleanup.html"><div><b>Cleanup review</b><p class="note">Every funnel and automation, sorted into active and in use, active but not in use, and not active. Mark each Keep, Shut down or Not sure.</p></div><span class="chip ok">Ready</span></a>
+    <div class="panel lk"><div><b>How NBR's automations work</b><p class="note">A flowchart for every automation that stays, with timing and every message.</p></div><span class="chip soon">After decisions</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Resources</h2>
+  <div class="links">
+    <a class="panel lk" href="cleanup.html#show-all"><div><b>Full list of names</b><p class="note">Every funnel, website, automation, product, form, survey and calendar, sorted into in use, not in use and not active.</p></div><span class="chip ok">Open</span></a>
+    <a class="panel lk" href="emails.html"><div><b>How the emails look</b><p class="note">Previews of the 58 emails in the automations we're keeping, with their text and design scores.</p></div><span class="chip ok">Open</span></a>
+    <a class="panel lk" href="cleanup.html#show-all-workflow"><div><b>Automations, with flowcharts and GHL links</b><p class="note">Open any automation to see how it works step by step, its emails, and an Open in GHL link.</p></div><span class="chip ok">Open</span></a>
+    <a class="panel lk" href="email.html#rules"><div><b>Email sending rules</b><p class="note">The rules for every send: sender domain, engaged contacts only, one brand at a time.</p></div><span class="chip ok">Open</span></a>
+    <a class="panel lk" href="https://members.nbr.education/q78cdzmhcxyf3w9vjaph3t23nkxp" target="_blank" rel="noopener"><div><b>Greg's GHL account guide (Nov 18)</b><p class="note">The full map of the account from the previous agency: every funnel, automation, form and how-to.</p></div><span class="chip ok">Open ↗</span></a>
+    <a class="panel lk" href="https://app.gohighlevel.com/" target="_blank" rel="noopener"><div><b>GoHighLevel</b><p class="note">Sign in and choose the "Natural Beaded Rows (NBR)" sub-account.</p></div><span class="chip ok">Open ↗</span></a>
+  </div>
+</section>
+
+<footer>Read-only audit, Nov 20–21, refreshed Nov 23, 2026 (EST) · GHL keeps only 60 days of history, so items it couldn't judge are marked Check · Social Planner, Countdown Timers, Payment Links and Subscriptions weren't checked</footer>
+</main>
+<script>
+const data=[["By activity",186,[["k","Active and in use",68,"in use"],["c","Active but not in use",69,"not in use"],["s","Not active",49,"not active"]]],["By verdict",186,[["k","Keep",95,"keep"],["c","Check",53,"check"],["s","Shut down",38,"shut down"]]]];
+const bars=document.getElementById("bars");
+data.forEach(([name,total,segs])=>{
+  const row=document.createElement("div");row.className="brow";
+  const lab=document.createElement("div");lab.className="blab";lab.textContent=name;const sub=document.createElement("span");sub.textContent=total+" total";lab.append(sub);
+  const tr=document.createElement("div");tr.className="track";
+  segs.forEach(([c,l,n,sh])=>{const s=document.createElement("div");s.className="seg "+c;s.style.flex=n;s.tabIndex=0;s.innerHTML=`${n}<span class="sl">&nbsp;${sh}</span>`;
+    const t=document.createElement("span");t.className="tip";t.textContent=`${l}: ${n} of ${total} (${Math.round(n/total*100)}%)`;s.append(t);tr.append(s);});
+  row.append(lab,tr);bars.append(row);
+});
+// timeline Nov 21 (day 0) .. Dec 31 (day 40)
+const X=d=>40+d*(600/40), tl=document.getElementById("tl");
+const day=(m,d)=>m===11?d-21:d+9;
+let s="";const AX=168;
+s+=`<line x1="40" y1="${AX}" x2="640" y2="${AX}" stroke="var(--line)" stroke-width="1"/>`;
+[[11,21,"Nov 21"],[11,27,"Nov 27"],[12,1,"Dec 1"],[12,15,"Dec 15"],[12,31,"Dec 31"]].forEach(([m,d,t])=>{const x=X(day(m,d));s+=`<line x1="${x}" y1="${AX-4}" x2="${x}" y2="${AX+4}" stroke="var(--muted)"/><text x="${x}" y="${AX+20}" text-anchor="middle" font-size="11.5" fill="var(--muted)">${t}</text>`;});
+const band=(y,a,b,fill,stroke,label,sub,href)=>{const x1=X(a),x2=X(b),w=x2-x1,inside=w>label.length*7.2+24;
+  return `<a href="${href}" style="cursor:pointer"><rect x="${x1}" y="${y}" width="${w}" height="26" rx="4" fill="var(${fill})" stroke="var(${stroke})" stroke-width="1"><title>${label}: ${sub}. Click for details.</title></rect><text x="${inside?x1+8:x2+8}" y="${y+17}" font-size="12" font-weight="600" fill="var(--ink)">${label} ↓${inside?"":`<tspan font-weight="400" fill="var(--muted)"> ${sub}</tspan>`}</text>${inside&&x2+8+sub.length*6.4<640?`<text x="${x2+8}" y="${y+17}" font-size="12" fill="var(--muted)">${sub}</text>`:""}</a>`;};
+s+=band(12,day(11,21),day(11,23),"--blue-bg","--blue","Warm-up","ran to Nov 22, then paused","#b-warm");
+s+=band(48,day(11,23),day(11,24.4),"--red-bg","--red","Sending blocked","until Nov 24, 10:04 AM EST","#b-block");
+s+=band(84,day(11,23),day(11,30.9),"--check-bg","--check","BFCM","7 ISLA emails, 15% off, Nov 23–30","#b-bf");
+s+=band(120,day(12,1),day(12,31),"--red-bg","--red","December: nothing planned","31 days with no sends","#b-dec");
+tl.innerHTML=s;
+// flow
+const steps=[["Audit done","Read-only","--keep-bg","--keep"],["Team reviews","Votes by Mon","--blue-bg","--blue"],["PJ approves","Cleanup list","--check-bg","--check"],["Switch off","Safest first","--shut-bg","--shut"],["Guide","What stays","--keep-bg","--keep"]];
+let f="";const w=112,gap=(680-20-5*w)/4;
+steps.forEach(([t,sub,bg,st],i)=>{const x=10+i*(w+gap);f+=`<rect x="${x}" y="30" width="${w}" height="56" rx="8" fill="var(${bg})" stroke="var(${st})" stroke-width="1.2"/><text x="${x+w/2}" y="54" text-anchor="middle" font-size="13.5" font-weight="600" fill="var(--ink)">${t}</text><text x="${x+w/2}" y="72" text-anchor="middle" font-size="11.5" fill="var(--muted)">${sub}</text>`;
+  if(i<4)f+=`<line x1="${x+w+3}" y1="58" x2="${x+w+gap-4}" y2="58" stroke="var(--muted)" color="var(--muted)" stroke-width="1.3" marker-end="url(#ar)"/>`;});
+document.getElementById("flow").innerHTML=f;
+</script>
+</body>
+</html>
